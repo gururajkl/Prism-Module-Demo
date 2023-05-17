@@ -24,13 +24,8 @@ namespace ModuleA.Logic
 
         public ControlALogic()
         {
-            Click = new DelegateCommand(Execute, CanExecute)
-                .ObservesProperty(() => CanCheck);
-        }
-
-        public bool CanExecute()
-        {
-            return CanCheck;
+            Click = new DelegateCommand(Execute)
+                .ObservesCanExecute(() => CanCheck);
         }
 
         public void Execute()
