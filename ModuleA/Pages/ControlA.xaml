@@ -6,7 +6,10 @@
              xmlns:local="clr-namespace:ModuleA.Pages"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
+    <StackPanel>
+        <CheckBox Content="Check the box"
+                  IsChecked="{Binding CanCheck}" />
         <TextBlock Text="{Binding Text}" />
-    </Grid>
+        <Button Command="{Binding Click}">Click</Button>
+    </StackPanel>
 </UserControl>
